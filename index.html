@@ -6,189 +6,130 @@
     <title>مشروع مادة الحاسب - يزن شامي</title>
     <style>
         :root {
-            --primary: #2196f3; /* أزرق فاتح للألقاب */
-            --accent: #ff1744; /* أحمر نيون لعبارة الكامري */
-            --bg-color: #000000; /* خلفية سوداء بالكامل */
-            --card-bg: #1a1a1a; /* لون أغمق للكروت */
-            --text-color: #ffffff; /* نص أبيض */
-            --sub-text-color: #b0bec5; /* نص فرعي رمادي */
+            --primary: #2196f3;
+            --accent: #ff1744;
+            --bg-color: #000000;
+            --card-bg: #1a1a1a;
+            --text-color: #ffffff;
+            --sub-text-color: #b0bec5;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg-color);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             color: var(--text-color);
             line-height: 1.6;
-            direction: rtl; /* اتجاه من اليمين لليسار */
         }
-        .main-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .main-container { max-width: 1000px; margin: 0 auto; }
         header {
             text-align: center;
             background: linear-gradient(135deg, #121212 0%, #2c3e50 100%);
-            color: white;
-            padding: 60px 20px;
+            padding: 40px 20px;
             border-radius: 20px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
             border: 1px solid #333;
         }
-        h1 { margin: 0; font-size: 3em; text-transform: uppercase; letter-spacing: 2px; }
-        .sub-header { font-size: 1.2em; opacity: 0.9; margin-top: 10px; }
-        
-        /* قسم الفريق */
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.2em;
-            position: relative;
-            color: var(--primary);
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* عمود واحد لصورتك فقط */
-            justify-items: center; /* توسيط الصورة */
-            gap: 20px;
-            margin-bottom: 60px;
-        }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 30px; }
+        .team-grid { display: flex; justify-content: center; margin-bottom: 40px; }
         .team-card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             text-align: center;
             border: 1px solid #333;
-            max-width: 300px;
+            width: 280px;
         }
-        .team-card img {
+        /* كود عرض الصور المدمجة */
+        .img-box {
             width: 100%;
             height: 350px;
-            object-fit: cover;
+            background-size: cover;
+            background-position: center;
             border-radius: 15px;
-            border: 4px solid var(--primary);
-            margin-bottom: 20px;
-        }
-        .group-members {
-            text-align: center;
-            margin-bottom: 60px;
-            background: #111;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #222;
-        }
-        .group-members p { margin: 5px 0; color: var(--sub-text-color); font-size: 1.1em; }
-
-        /* قسم السيارات */
-        .car-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            border: 3px solid var(--primary);
+            margin-bottom: 15px;
         }
         .car-card {
             background: var(--card-bg);
             border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: column;
+            margin-bottom: 30px;
             border: 1px solid #333;
+            overflow: hidden;
         }
-        .car-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
+        .car-img-box {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
         }
-        .car-title {
-            font-size: 1.6em;
-            color: var(--primary);
-            margin: 0 0 10px 0;
-        }
-        .car-model {
-            font-size: 1.1em;
-            color: var(--sub-text-color);
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
+        .car-content { padding: 25px; }
+        .car-title { color: var(--primary); font-size: 1.8em; margin: 0; }
+        .car-model { color: var(--sub-text-color); font-weight: bold; margin-bottom: 10px; }
         .grande-special {
             background: var(--accent);
             color: white;
-            padding: 12px 20px;
+            padding: 10px 20px;
             border-radius: 10px;
-            font-weight: bold;
             display: inline-block;
-            margin-top: auto;
-            text-align: center;
-            font-size: 1.1em;
-            box-shadow: 0 0 10px rgba(255, 23, 68, 0.5);
+            margin-top: 15px;
+            font-weight: bold;
         }
+        .members-list { text-align: center; color: var(--sub-text-color); margin-bottom: 40px; }
     </style>
 </head>
 <body>
 
     <div class="main-container">
         <header>
-            <h1>Welcome to our project</h1>
-            <p class="sub-header">مشروع استعراض السيارات - تقديم الطالب يزن شامي ومجموعته</p>
+            <h1>WELCOME TO OUR PROJECT</h1>
+            <p>مشروع استعراض السيارات - تقديم الطالب يزن شامي ومجموعته</p>
         </header>
 
         <h2 class="section-title">قائد الفريق</h2>
-        <section class="team-grid">
+        <div class="team-grid">
             <div class="team-card">
-                <img src="my_photo.pdf" alt="يزن سليمان شامي">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
+                     style="background-image: url('https://api.screenshotmachine.com/?key=YOUR_KEY&url=https://your-image-url.com');" 
+                     class="img-box" alt="يزن سليمان شامي">
                 <h3>يزن سليمان شامي</h3>
             </div>
-        </section>
+        </div>
 
-        <div class="group-members">
+        <div class="members-list">
             <h3>أعضاء المجموعة</h3>
-            <p>يزن شامي</p>
-            <p>عبدالعزيز شراحيلي</p>
-            <p>سيف عريشي</p>
+            <p>عبدالعزيز شراحيلي | سيف عريشي</p>
         </div>
 
         <h2 class="section-title">معلومات عن السيارات</h2>
-        <section class="car-section">
-            
-            <div class="car-card">
-                <div class="car-content">
-                    <h3 class="car-title">تويوتا كامري قراندي</h3>
-                    <div class="car-model">الموديل: 2001</div>
-                    <p>سيارة السيدان الكلاسيكية الأسطورية، المعروفة بالتحمل والأداء العالي بمحرك الـ 6 سلندر.</p>
-                    <div class="grande-special">"تشم امقاع جيفه"</div>
-                </div>
-            </div>
 
-            <div class="car-card">
-                <div class="car-content">
-                    <h3 class="car-title" style="color: #fff;">كيا K5</h3>
-                    <div class="car-model">الموديل: 2023</div>
-                    <p>التصميم العصري والرياضي الذي يجمع بين الفخامة والتطور التقني الحديث.</p>
-                </div>
+        <div class="car-card">
+            <div class="car-img-box" style="background-image: url('https://i.ibb.co/vzrV8Vq/camry2001.jpg');"></div>
+            <div class="car-content">
+                <h3 class="car-title">تويوتا كامري قراندي</h3>
+                <div class="car-model">الموديل: 2001</div>
+                <p>السيارة الأسطورية 6 سلندر، راحة وقوة وتحمل أثبتت جدارتها عبر السنين.</p>
+                <div class="grande-special">"تشم امقاع جيفه"</div>
             </div>
+        </div>
 
-            <div class="car-card">
-                <div class="car-content">
-                    <h3 class="car-title" style="color: #4caf50;">تويوتا هايلوكس</h3>
-                    <div class="car-model">الموديل: 2009</div>
-                    <p>سيارة المهام الشاقة المعروفة بصلابتها، وتعتمد نظام الدفع الخلفي (غمارتين) وبدون كتابات.</p>
-                </div>
+        <div class="car-card">
+            <div class="car-img-box" style="background-image: url('https://i.ibb.co/L9Hq3M5/hilux2009.jpg');"></div>
+            <div class="car-content">
+                <h3 class="car-title" style="color: #4caf50;">تويوتا هايلوكس</h3>
+                <div class="car-model">الموديل: 2009</div>
+                <p>سيارة المهام الشاقة، دفع خلفي، تمتاز بالصلابة والعملانية في مختلف الظروف.</p>
             </div>
+        </div>
 
-        </section>
+        <div class="car-card">
+            <div class="car-img-box" style="background-image: url('https://i.ibb.co/7XzB6Qx/kia2023.jpg');"></div>
+            <div class="car-content">
+                <h3 class="car-title">كيا K5</h3>
+                <div class="car-model">الموديل: 2023</div>
+                <p>التصميم العصري والرياضي الذي يجمع بين الفخامة والتطور التقني الحديث.</p>
+            </div>
+        </div>
     </div>
 
 </body>
