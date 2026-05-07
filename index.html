@@ -49,12 +49,17 @@
             margin-bottom: 15px;
         }
         .car-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .car-card { background: var(--card-bg); border-radius: 25px; overflow: hidden; border: 1px solid #333; }
-        .car-img { width: 100%; height: 250px; object-fit: cover; }
-        .car-content { padding: 25px; }
+        .car-card { background: var(--card-bg); border-radius: 25px; overflow: hidden; border: 1px solid #333; display: flex; flex-direction: column; }
+        .car-img-box {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        .car-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
         .car-title { color: var(--primary); font-size: 1.6em; margin: 0; }
         .car-model { color: var(--sub-text-color); font-weight: bold; margin-bottom: 15px; }
-        .grande-tag { background: var(--accent); color: white; padding: 10px; border-radius: 8px; display: inline-block; font-weight: bold; margin-top: 15px; }
+        .grande-tag { background: var(--accent); color: white; padding: 10px; border-radius: 8px; display: inline-block; font-weight: bold; margin-top: auto; text-align: center; }
         .group-members { text-align: center; margin-top: 20px; color: var(--sub-text-color); }
     </style>
 </head>
@@ -83,30 +88,30 @@
         <section class="car-section">
             
             <div class="car-card">
-                <img src="https://i.ibb.co/vzrV8Vq/camry2001.jpg" class="car-img" alt="كامري">
+                <div class="car-img-box" style="background-image: url('https://i.ibb.co/vzrV8Vq/camry2001.jpg');"></div>
                 <div class="car-content">
                     <h3 class="car-title">تويوتا كامري قراندي</h3>
                     <div class="car-model">الموديل: 2001</div>
-                    <p>6 سلندر، قوة وتحمل أسطوري.</p>
+                    <p>السيارة الأسطورية 6 سلندر، راحة وقوة وتحمل.</p>
                     <div class="grande-tag">"تشم امقاع جيفه"</div>
                 </div>
             </div>
 
             <div class="car-card">
-                <img src="https://i.ibb.co/L9Hq3M5/hilux2009.jpg" class="car-img" alt="هايلوكس">
+                <div class="car-img-box" style="background-image: url('https://i.ibb.co/L9Hq3M5/hilux2009.jpg');"></div>
                 <div class="car-content">
                     <h3 class="car-title" style="color: #4caf50;">تويوتا هايلوكس</h3>
                     <div class="car-model">الموديل: 2009</div>
-                    <p>دفع خلفي، عملية وبدون كتابات.</p>
+                    <p>دفع خلفي، عملية وبدون كتابات على الزجاج.</p>
                 </div>
             </div>
 
             <div class="car-card">
-                <img src="https://i.ibb.co/7XzB6Qx/kia2023.jpg" class="car-img" alt="كيا">
+                <div class="car-img-box" style="background-image: url('https://i.ibb.co/7XzB6Qx/kia2023.jpg');"></div>
                 <div class="car-content">
                     <h3 class="car-title">كيا K5</h3>
                     <div class="car-model">الموديل: 2023</div>
-                    <p>تصميم رياضي عصري وفخامة.</p>
+                    <p>التصميم العصري والرياضي الذي يجمع بين الفخامة والتطور التقني الحديث.</p>
                 </div>
             </div>
 
