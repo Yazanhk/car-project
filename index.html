@@ -3,75 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشروع مادة السيارات - يزن شامي</title>
+    <title>مشروع السيارات - يزن شامي</title>
     <style>
-        :root {
-            --primary: #1a73e8;
-            --accent: #d93025;
-            --bg: #f8f9fa;
-            --card-bg: #ffffff;
-            --text: #202124;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            margin: 0;
-            padding: 0;
-            color: var(--text);
-            line-height: 1.6;
-        }
-        .main-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            background: var(--primary);
-            color: white;
-            padding: 60px 20px;
-            border-radius: 20px;
-            margin-bottom: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        h1 { margin: 0; font-size: 3em; }
-        .sub-header { font-size: 1.2em; opacity: 0.9; margin-top: 10px; }
+        :root { --primary: #1a73e8; --accent: #d93025; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg); margin: 0; padding: 20px; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        header { text-align: center; border-bottom: 3px solid var(--primary); padding-bottom: 20px; margin-bottom: 40px; }
         
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2.2em; color: var(--text); }
-        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background: var(--primary); margin: 10px auto 0; border-radius: 2px; }
+        .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 50px; }
+        .member-card { text-align: center; width: 250px; padding: 15px; border-radius: 15px; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .member-card img { width: 100%; height: 320px; object-fit: cover; border-radius: 10px; border: 3px solid var(--primary); }
         
-        .team-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 70px;
-        }
-        .team-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .team-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-        .team-card img {
-            width: 200px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 15px;
-            border: 5px solid #f0f0f0;
-            margin-bottom: 20px;
-        }
-        .member-info h3 { margin: 10px 0; color: var(--primary); }
+        .car-card { background: #fff; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; }
+        .car-card img { width: 100%; max-height: 500px; object-fit: cover; }
+        .car-info { padding: 25px; text-align: right; }
+        .grande-special { background: var(--accent); color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold; display: inline-block; margin-top: 15px; }
+        h1, h2, h3 { margin-top: 0; }
+    </style>
+</head>
+<body>
 
-        .car-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .car-card {
-            background: var(--card-bg);
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08
+    <div class="container">
+        <header>
+            <h1>Welcome to our project</h1>
+            <p>مشروع مادة السيارات - يزن شامي ومجموعته</p>
+        </header>
+
+        <h2>أعضاء الفريق</h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <img src="yazan.jpg" alt="يزن شامي">
+                <h3>يزن سليمان شامي</h3>
+            </div>
+            <div class="member-card">
+                <div style="height:320px; background:#eee; border-radius:10px; display:flex; align-items:center; justify-content:center;">صورة الطالب</div>
+                <h3>سيف عريشي</h3>
+            </div>
+            <div class="member-card">
+                <div style="height:320px; background:#eee; border-radius:10px; display:flex; align-items:center; justify-content:center;">صورة الطالب</div>
+                <h3>عبدالعزيز شراحيلي</h3>
+            </div>
+        </div>
+
+        <h2>استعراض السيارات</h2>
+
+        <div class="car-card">
+            <img src="camry.jpg" alt="تويوتا كامري قراندي">
+            <div class="car-info">
+                <h3 style="color: var(--primary);">تويوتا كامري قراندي</h3>
+                <p>السيارة الأسطورية 6 سلندر، راحة وقوة وتحمل.</p>
+                <div class="grande-special">"تشم امقاع جيفه"</div>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="kia.png" alt="كيا K5">
+            <div class="car-info">
+                <h3>كيا K5</h3>
+                <p>تصميم عصري وتقنيات حديثة وفخامة في القيادة.</p>
+            </div>
+        </div>
+
+        <div class="car-card">
+            <img src="hilux.jpg" alt="تويوتا هايلوكس">
+            <div class="car-info">
+                <h3 style="color: #27ae60;">تويوتا هايلوكس</h3>
+                <p>سيارة المهام الصعبة، دفع خلفي، وبدون أي كتابات على الزجاج.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
