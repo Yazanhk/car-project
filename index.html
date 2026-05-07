@@ -3,130 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To Our Project</title>
-
+    <title>مشروع مادة حوسبة سحابية - يزن شامي</title>
     <style>
-        body{
-            margin:0;
-            background:#111;
-            color:white;
-            font-family:Arial;
+        :root {
+            --primary: #2196f3;
+            --accent: #ff1744;
+            --bg-color: #000000;
+            --card-bg: #1a1a1a;
+            --text-color: #ffffff;
+            --sub-text-color: #b0bec5;
         }
-
-        header{
-            text-align:center;
-            padding:30px;
-            background:black;
-            border-bottom:2px solid gold;
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            direction: rtl;
         }
-
-        h1{
-            color:gold;
+        .main-container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #121212 0%, #2c3e50 100%);
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+            border: 1px solid #333;
         }
-
-        .container{
-            width:90%;
-            margin:auto;
-            padding:30px 0;
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2.2em; }
+        .team-grid { display: flex; justify-content: center; margin-bottom: 50px; }
+        .team-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #333;
+            width: 320px;
         }
-
-        .leader{
-            text-align:center;
-            margin-bottom:50px;
+        .team-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid var(--primary);
+            margin-bottom: 15px;
         }
-
-        .leader img{
-            width:300px;
-            border-radius:20px;
-            border:3px solid gold;
+        .car-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .car-card { background: var(--card-bg); border-radius: 25px; overflow: hidden; border: 1px solid #333; display: flex; flex-direction: column; }
+        .car-img-box {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
         }
-
-        .car{
-            background:#1c1c1c;
-            margin-bottom:40px;
-            padding:20px;
-            border-radius:20px;
-        }
-
-        .car img{
-            width:100%;
-            border-radius:15px;
-            margin-bottom:20px;
-        }
-
-        h2{
-            color:gold;
-        }
-
-        ul li{
-            margin:10px 0;
-        }
+        .car-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .car-title { color: var(--primary); font-size: 1.6em; margin: 0; }
+        .car-model { color: var(--sub-text-color); font-weight: bold; margin-bottom: 15px; }
+        .grande-tag { background: var(--accent); color: white; padding: 10px; border-radius: 8px; display: inline-block; font-weight: bold; margin-top: auto; text-align: center; }
+        .group-members { text-align: center; margin-top: 20px; color: var(--sub-text-color); }
     </style>
-
 </head>
 <body>
 
-<header>
-    <h1>Welcome To Our Project</h1>
-</header>
+    <div class="main-container">
+        <header>
+            <h1>WELCOME TO OUR PROJECT</h1>
+            <p>مشروع مادة: حوسبة سحابية - تقديم الطالب يزن شامي ومجموعته</p>
+        </header>
 
-<div class="container">
+        <h2 class="section-title">قائد الفريق</h2>
+        <section class="team-grid">
+            <div class="team-card">
+                <img src="yazan.jpeg" alt="يزن سليمان شامي">
+                <h3>يزن سليمان شامي</h3>
+            </div>
+        </section>
 
-    <!-- قائد الفريق -->
-    <div class="leader">
-        <img src="yazan.jpeg" alt="Yazan">
-        <h2>قائد الفريق: يزن سليمان شامي</h2>
+        <div class="group-members">
+            <h3>أعضاء المجموعة</h3>
+            <p>عبدالعزيز شراحيلي | سيف عريشي</p>
+        </div>
+
+        <h2 class="section-title">معلومات عن السيارات</h2>
+        <section class="car-section">
+            
+            <div class="car-card">
+                <div class="car-img-box" style="background-image: url('camry.jpeg');"></div>
+                <div class="car-content">
+                    <h3 class="car-title">تويوتا كامري قراندي</h3>
+                    <div class="car-model">الموديل: 2001</div>
+                    <p>السيارة الأسطورية 6 سلندر، راحة وقوة وتحمل عالي.</p>
+                    <div class="grande-tag">"تشم امقاع جيفه"</div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-img-box" style="background-image: url('hilux: .jpeg;');"></div>
+                <div class="car-content">
+                    <h3 class="car-title" style="color: #4caf50;">تويوتا هايلوكس</h3>
+                    <div class="car-model">الموديل: 2009</div>
+                    <p>سيارة المهام الشاقة، دفع خلفي، تمتاز بالصلابة والعملانية.</p>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <div class="car-img-box" style="background-image: url('k5.jpeg');"></div>
+                <div class="car-content">
+                    <h3 class="car-title">كيا K5</h3>
+                    <div class="car-model">الموديل: 2023</div>
+                    <p>التصميم العصري والرياضي الذي يجمع بين الفخامة والتطور التقني الحديث.</p>
+                </div>
+            </div>
+
+        </section>
     </div>
-
-    <!-- كامري -->
-    <div class="car">
-        <img src="camry.jpeg" alt="كامري 2001">
-
-        <h2>كامري قراندي 2001</h2>
-
-        <p>
-            أسطورة الشارع... سيارة يعرفها من عشق الياباني.
-            بين ملاكها عبارة مشهورة:
-            <b>"تشم امقاع جيفه"</b>
-        </p>
-
-        <ul>
-            <li>مكينة قوية واعتمادية عالية</li>
-            <li>راحة ممتازة في الخطوط</li>
-            <li>قطع غيار متوفرة</li>
-            <li>شكل كلاسيكي محبوب</li>
-        </ul>
-    </div>
-
-    <!-- K5 -->
-    <div class="car">
-        <img src="k5.jpeg" alt="K5">
-
-        <h2>KIA K5 2023</h2>
-
-        <ul>
-            <li>تصميم رياضي شرس</li>
-            <li>أنظمة أمان حديثة</li>
-            <li>شاشة وتقنيات متطورة</li>
-            <li>اقتصادية في الوقود</li>
-        </ul>
-    </div>
-
-    <!-- الهايلوكس -->
-    <div class="car">
-        <img src="hilux.jpeg" alt="هايلوكس 2009">
-      
-        <h2>Hilux 2009 </h2>
-
-        <ul>
-            <li>دفع خلفي</li>
-            <li>تحمل عالي</li>
-            <li>مناسب للعمل والاستخدام اليومي</li>
-            <li>صيانة سهلة</li>
-        </ul>
-    </div>
-
-</div>
 
 </body>
 </html>
