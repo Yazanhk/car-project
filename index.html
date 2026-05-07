@@ -17,65 +17,45 @@
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background-color: var(--bg-color);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             color: var(--text-color);
-            line-height: 1.6;
+            direction: rtl;
         }
-        .main-container { max-width: 1000px; margin: 0 auto; }
+        .main-container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
         header {
             text-align: center;
             background: linear-gradient(135deg, #121212 0%, #2c3e50 100%);
-            padding: 40px 20px;
+            padding: 60px 20px;
             border-radius: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             border: 1px solid #333;
         }
-        .section-title { text-align: center; color: var(--primary); margin-bottom: 30px; }
-        .team-grid { display: flex; justify-content: center; margin-bottom: 40px; }
+        .section-title { text-align: center; color: var(--primary); margin-bottom: 40px; font-size: 2.2em; }
+        .team-grid { display: flex; justify-content: center; margin-bottom: 50px; }
         .team-card {
             background: var(--card-bg);
-            padding: 20px;
+            padding: 25px;
             border-radius: 20px;
             text-align: center;
             border: 1px solid #333;
-            width: 280px;
+            width: 300px;
         }
-        /* كود عرض الصور المدمجة */
-        .img-box {
-            width: 100%;
-            height: 350px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            border: 3px solid var(--primary);
-            margin-bottom: 15px;
-        }
-        .car-card {
-            background: var(--card-bg);
-            border-radius: 25px;
-            margin-bottom: 30px;
-            border: 1px solid #333;
-            overflow: hidden;
-        }
-        .car-img-box {
+        .team-card img {
             width: 100%;
             height: 400px;
-            background-size: cover;
-            background-position: center;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid var(--primary);
+            margin-bottom: 15px;
         }
+        .car-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .car-card { background: var(--card-bg); border-radius: 25px; overflow: hidden; border: 1px solid #333; }
+        .car-img { width: 100%; height: 250px; object-fit: cover; }
         .car-content { padding: 25px; }
-        .car-title { color: var(--primary); font-size: 1.8em; margin: 0; }
-        .car-model { color: var(--sub-text-color); font-weight: bold; margin-bottom: 10px; }
-        .grande-special {
-            background: var(--accent);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        .members-list { text-align: center; color: var(--sub-text-color); margin-bottom: 40px; }
+        .car-title { color: var(--primary); font-size: 1.6em; margin: 0; }
+        .car-model { color: var(--sub-text-color); font-weight: bold; margin-bottom: 15px; }
+        .grande-tag { background: var(--accent); color: white; padding: 10px; border-radius: 8px; display: inline-block; font-weight: bold; margin-top: 15px; }
+        .group-members { text-align: center; margin-top: 20px; color: var(--sub-text-color); }
     </style>
 </head>
 <body>
@@ -87,49 +67,50 @@
         </header>
 
         <h2 class="section-title">قائد الفريق</h2>
-        <div class="team-grid">
+        <section class="team-grid">
             <div class="team-card">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
-                     style="background-image: url('https://api.screenshotmachine.com/?key=YOUR_KEY&url=https://your-image-url.com');" 
-                     class="img-box" alt="يزن سليمان شامي">
+                <img src="https://i.ibb.co/3YYvGv9/yazan-photo.jpg" alt="يزن سليمان شامي">
                 <h3>يزن سليمان شامي</h3>
             </div>
-        </div>
+        </section>
 
-        <div class="members-list">
+        <div class="group-members">
             <h3>أعضاء المجموعة</h3>
             <p>عبدالعزيز شراحيلي | سيف عريشي</p>
         </div>
 
         <h2 class="section-title">معلومات عن السيارات</h2>
-
-        <div class="car-card">
-            <div class="car-img-box" style="background-image: url('https://i.ibb.co/vzrV8Vq/camry2001.jpg');"></div>
-            <div class="car-content">
-                <h3 class="car-title">تويوتا كامري قراندي</h3>
-                <div class="car-model">الموديل: 2001</div>
-                <p>السيارة الأسطورية 6 سلندر، راحة وقوة وتحمل أثبتت جدارتها عبر السنين.</p>
-                <div class="grande-special">"تشم امقاع جيفه"</div>
+        <section class="car-section">
+            
+            <div class="car-card">
+                <img src="https://i.ibb.co/vzrV8Vq/camry2001.jpg" class="car-img" alt="كامري">
+                <div class="car-content">
+                    <h3 class="car-title">تويوتا كامري قراندي</h3>
+                    <div class="car-model">الموديل: 2001</div>
+                    <p>6 سلندر، قوة وتحمل أسطوري.</p>
+                    <div class="grande-tag">"تشم امقاع جيفه"</div>
+                </div>
             </div>
-        </div>
 
-        <div class="car-card">
-            <div class="car-img-box" style="background-image: url('https://i.ibb.co/L9Hq3M5/hilux2009.jpg');"></div>
-            <div class="car-content">
-                <h3 class="car-title" style="color: #4caf50;">تويوتا هايلوكس</h3>
-                <div class="car-model">الموديل: 2009</div>
-                <p>سيارة المهام الشاقة، دفع خلفي، تمتاز بالصلابة والعملانية في مختلف الظروف.</p>
+            <div class="car-card">
+                <img src="https://i.ibb.co/L9Hq3M5/hilux2009.jpg" class="car-img" alt="هايلوكس">
+                <div class="car-content">
+                    <h3 class="car-title" style="color: #4caf50;">تويوتا هايلوكس</h3>
+                    <div class="car-model">الموديل: 2009</div>
+                    <p>دفع خلفي، عملية وبدون كتابات.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="car-card">
-            <div class="car-img-box" style="background-image: url('https://i.ibb.co/7XzB6Qx/kia2023.jpg');"></div>
-            <div class="car-content">
-                <h3 class="car-title">كيا K5</h3>
-                <div class="car-model">الموديل: 2023</div>
-                <p>التصميم العصري والرياضي الذي يجمع بين الفخامة والتطور التقني الحديث.</p>
+            <div class="car-card">
+                <img src="https://i.ibb.co/7XzB6Qx/kia2023.jpg" class="car-img" alt="كيا">
+                <div class="car-content">
+                    <h3 class="car-title">كيا K5</h3>
+                    <div class="car-model">الموديل: 2023</div>
+                    <p>تصميم رياضي عصري وفخامة.</p>
+                </div>
             </div>
-        </div>
+
+        </section>
     </div>
 
 </body>
